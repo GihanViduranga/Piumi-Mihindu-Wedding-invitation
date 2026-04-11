@@ -481,7 +481,7 @@ export default function WeddingInvitation() {
                 <span style={{ color: "var(--crimson)", fontSize: ".68rem" }}>✦</span>
                 <div className="cl-line r" />
               </div>
-              <p className="cl-reply">Kindly reply by the 1st of April · 2026</p>
+              <p className="cl-reply">Kindly reply by the 5th of May · 2026</p>
             </div>
 
             <div className="ribbon" style={{ transform: "rotate(180deg)" }} />
