@@ -33,7 +33,8 @@ html,body{width:100%;min-height:100%;margin:0;padding:0;font-family:'Josefin San
 
 body{
   min-height:100vh;
-  background:radial-gradient(ellipse 160% 140% at 50% 0%, #2a0a0e 0%, #1a0408 55%, #0d0103 100%);
+  background:radial-gradient(ellipse 160% 140% at 50% 0%, rgba(42,4,14,0.82) 0%, rgba(26,4,8,0.82) 55%, rgba(13,1,3,0.82) 100%),
+  url('/images/image1.jpeg') center/cover no-repeat fixed;
   display:flex;flex-direction:column;align-items:center;justify-content:center;
 }
 
@@ -73,8 +74,9 @@ body{
 
 .full-page{
   position:fixed;inset:0;
-  background:radial-gradient(ellipse 160% 140% at 50% 0%, #2a0a0e 0%, #1a0408 55%, #0d0103 100%);
-  overflow-y:auto;display:flex;justify-content:center;align-items:flex-start;
+  background:radial-gradient(ellipse 160% 140% at 50% 0%, rgba(42,4,14,0.75) 0%, rgba(26,4,8,0.75) 55%, rgba(13,1,3,0.75) 100%),
+  url('/images/image1.jpeg') center/cover no-repeat fixed;
+  overflow-y:auto;
   padding:clamp(2rem,5vw,4rem) clamp(.75rem,3vw,1.5rem) clamp(3rem,6vw,5rem);
   z-index:50;opacity:0;pointer-events:none;
   transition:opacity .9s ease .15s;
@@ -84,7 +86,9 @@ body{
 
 .full-card{
   position:relative;overflow:hidden;
-  background:linear-gradient(158deg, var(--card-bg) 0%, var(--card-mid) 60%, var(--card-drk) 100%);
+  background:linear-gradient(158deg, rgba(233,212,193,0.52) 0%, rgba(239,220,204,0.52) 60%, rgba(209,183,160,0.52) 100%);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
   border:1px solid rgba(94,0,6,.2);
   box-shadow:0 0 0 1px rgba(161,129,104,.08),0 40px 100px rgba(0,0,0,.8),0 0 80px rgba(94,0,6,.12);
   transform:translateY(50px) scale(.93);
@@ -103,6 +107,15 @@ body{
 .fcc.br{bottom:12px;right:12px;border-width:0 1.5px 1.5px 0}
 
 .ribbon{height:4px;background:linear-gradient(90deg,#5E0006,#A18168,#D1B7A0,#A18168,#5E0006)}
+
+.fc-bg{
+  position:absolute;
+  inset:0;
+  background:url('/images/image2.jpeg') center/cover no-repeat;
+  opacity:0.3;
+  pointer-events:none;
+  z-index:1;
+}
 
 .fs{
   padding:clamp(1.6rem,4.5vw,2.8rem) clamp(1.4rem,4.5vw,2.6rem);
@@ -142,12 +155,12 @@ body{
 .sep-gem span{background:var(--card-mid);padding:0 .75rem;color:#5E0006;font-size:.72rem;font-weight:600}
 
 .eyebrow{font-size:clamp(6.5px,1.3vw,8.5px);font-weight:400;letter-spacing:.55em;color:#5E0006;text-transform:uppercase;display:block;margin-bottom:.85rem}
-.heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.8vw,1.55rem);font-weight:600;color:#2a1008;line-height:1.3;margin-bottom:.55rem}
-.body-p{font-family:'Cormorant Garamond',serif;font-size:clamp(.9rem,1.9vw,1.06rem);font-weight:400;color:rgba(42,16,8,0.75);line-height:1.8}
+.heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.8vw,1.55rem);font-weight:600;color:#1a0005;line-height:1.3;margin-bottom:.55rem}
+.body-p{font-family:'Cormorant Garamond',serif;font-size:clamp(.9rem,1.9vw,1.06rem);font-weight:400;color:rgba(20,0,5,0.92);line-height:1.8}
 
-.cover-names{font-family:'Great Vibes',cursive;font-size:clamp(3rem,9.5vw,5.8rem);color:#3a0a0e;line-height:.94;text-shadow:0 2px 12px rgba(94,0,6,.18)}
+.cover-names{font-family:'Great Vibes',cursive;font-size:clamp(3rem,9.5vw,5.8rem);color:#1a0005;line-height:.94;text-shadow:0 2px 12px rgba(94,0,6,.18)}
 .cover-amp{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.85rem,2.4vw,1.25rem);color:#5E0006;display:block;margin:.22rem 0}
-.cover-date{font-family:'Cormorant Garamond',serif;font-size:clamp(.84rem,1.9vw,1rem);font-weight:400;letter-spacing:.12em;color:rgba(42,16,8,0.65);margin-top:1rem}
+.cover-date{font-family:'Cormorant Garamond',serif;font-size:clamp(.84rem,1.9vw,1rem);font-weight:400;letter-spacing:.12em;color:rgba(20,0,5,0.85);margin-top:1rem}
 
 .couple-photos{
   display:grid;grid-template-columns:1fr 1fr;
@@ -171,7 +184,7 @@ body{
 .det-box{border:1px solid rgba(94,0,6,.18);padding:clamp(.62rem,1.6vw,.95rem);background:rgba(94,0,6,.04);transition:border-color .3s,background .3s}
 .det-box:hover{border-color:rgba(94,0,6,.35);background:rgba(94,0,6,.08)}
 .det-l{font-size:clamp(5.5px,1.1vw,7px);letter-spacing:.38em;color:#5E0006;font-weight:600;text-transform:uppercase;display:block;margin-bottom:.22rem}
-.det-v{font-family:'Cormorant Garamond',serif;font-size:clamp(.78rem,1.6vw,.92rem);font-weight:500;color:#2a1008;line-height:1.4;white-space:pre-line}
+.det-v{font-family:'Cormorant Garamond',serif;font-size:clamp(.78rem,1.6vw,.92rem);font-weight:500;color:#1a0005;line-height:1.4;white-space:pre-line}
 
 /* ── MAP ── */
 .map-wrap{width:100%;border-radius:3px;overflow:hidden;border:1px solid rgba(94,0,6,.22);margin-top:.85rem}
@@ -187,8 +200,8 @@ body{
 .map-btn:hover{background:#3a0004}
 .map-pin{font-size:13px;letter-spacing:0}
 
-.cl-script{font-family:'Great Vibes',cursive;font-size:clamp(1.9rem,6vw,3rem);color:#3a0a0e;opacity:.4;margin-bottom:.7rem}
-.cl-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.82rem,1.7vw,.97rem);font-weight:400;color:rgba(42,16,8,0.72);line-height:1.76}
+.cl-script{font-family:'Great Vibes',cursive;font-size:clamp(1.9rem,6vw,3rem);color:#1a0005;opacity:.75;;margin-bottom:.7rem}
+.cl-verse{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(.82rem,1.7vw,.97rem);font-weight:400;color:rgba(20,0,5,0.75);line-height:1.76}
 .cl-rule{display:flex;align-items:center;gap:.75rem;justify-content:center;margin-top:1.3rem}
 .cl-line{flex:1;height:1px}
 .cl-line.l{background:linear-gradient(90deg,transparent,rgba(94,0,6,.4))}
@@ -361,7 +374,7 @@ export default function WeddingInvitation() {
       <div className={`full-page${phase === "full" ? " show" : ""}`}>
         <div className="full-inner">
           <div className="full-card">
-            <div className="fc-wm" />
+            <div className="fc-bg" />
             <div className="fcc tl" /><div className="fcc tr" />
             <div className="fcc bl" /><div className="fcc br" />
             <div className="ribbon" />
@@ -373,7 +386,11 @@ export default function WeddingInvitation() {
               <p className="cover-date">Monday · the Eighteenth of May · 2026</p>
             </div>
 
-            <div className="fsep" /><div className="sep-gem"><span>✦</span></div>
+            <div className="cl-rule">
+                <div className="cl-line l" />
+                <span style={{ color: "var(--crimson)", fontSize: ".68rem" }}>✦</span>
+                <div className="cl-line r" />
+            </div>
 
             {/* 2 — Photos */}
             <div className="couple-photos">
@@ -381,7 +398,11 @@ export default function WeddingInvitation() {
               <PhotoFrame src="\images\image2.jpeg" label="Add photo here" icon="🌸" />
             </div>
 
-            <div className="fsep" /><div className="sep-gem"><span>✦</span></div>
+            <div className="cl-rule">
+                <div className="cl-line l" />
+                <span style={{ color: "var(--crimson)", fontSize: ".68rem" }}>✦</span>
+                <div className="cl-line r" />
+            </div>
 
             {/* 3 — Invitation */}
             <div className="fs">
@@ -390,7 +411,11 @@ export default function WeddingInvitation() {
               <p className="body-p">as we unite in marriage and begin our journey together. Surrounded by the love of our family and friends, we invite you to an evening of warmth, laughter, and celebration, filled with blessings, smiles, and memories to treasure forever. Come and witness our hearts become one under the beautiful Sri Lankan skies.</p>
             </div>
 
-            <div className="fsep" /><div className="sep-gem"><span>✦</span></div>
+            <div className="cl-rule">
+                <div className="cl-line l" />
+                <span style={{ color: "var(--crimson)", fontSize: ".68rem" }}>✦</span>
+                <div className="cl-line r" />
+            </div>
 
             {/* 4 — Details */}
             <div className="fs">
@@ -426,7 +451,11 @@ export default function WeddingInvitation() {
               </div>
             </div>
 
-            <div className="fsep" /><div className="sep-gem"><span>✦</span></div>
+            <div className="cl-rule">
+                <div className="cl-line l" />
+                <span style={{ color: "var(--crimson)", fontSize: ".68rem" }}>✦</span>
+                <div className="cl-line r" />
+            </div>
 
             {/* 5 — Map */}
             <div className="fs">
