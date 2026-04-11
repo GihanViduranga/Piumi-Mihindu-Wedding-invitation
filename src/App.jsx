@@ -154,7 +154,7 @@ body{
 .full-page.show .sep-gem:nth-of-type(7){transition-delay:2.2s}
 .sep-gem span{background:var(--card-mid);padding:0 .75rem;color:#5E0006;font-size:.72rem;font-weight:600}
 
-.eyebrow{font-size:clamp(6.5px,1.3vw,8.5px);font-weight:400;letter-spacing:.55em;color:#5E0006;text-transform:uppercase;display:block;margin-bottom:.85rem}
+.eyebrow{font-size:clamp(7.5px,1.3vw,8.5px);font-weight:600;letter-spacing:.55em;color:#5E0006;text-transform:uppercase;display:block;margin-bottom:.85rem}
 .heading{font-family:'Cormorant Garamond',serif;font-size:clamp(1.05rem,2.8vw,1.55rem);font-weight:600;color:#1a0005;line-height:1.3;margin-bottom:.55rem}
 .body-p{font-family:'Cormorant Garamond',serif;font-size:clamp(.9rem,1.9vw,1.06rem);font-weight:400;color:rgba(20,0,5,0.92);line-height:1.8}
 
@@ -180,11 +180,11 @@ body{
 .photo-label{font-size:clamp(6px,1.2vw,7.5px);letter-spacing:.4em;color:rgba(94,0,6,.5);text-transform:uppercase;font-family:'Josefin Sans',sans-serif;font-weight:200}
 .photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
 
-.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.55rem,1.5vw,.9rem);text-align:left;margin-top:.75rem}
+.det-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(.7rem,2vw,1rem);text-align:left;margin-top:.75rem}
 .det-box{border:1px solid rgba(94,0,6,.18);padding:clamp(.62rem,1.6vw,.95rem);background:rgba(94,0,6,.04);transition:border-color .3s,background .3s}
 .det-box:hover{border-color:rgba(94,0,6,.35);background:rgba(94,0,6,.08)}
-.det-l{font-size:clamp(5.5px,1.1vw,7px);letter-spacing:.38em;color:#5E0006;font-weight:600;text-transform:uppercase;display:block;margin-bottom:.22rem}
-.det-v{font-family:'Cormorant Garamond',serif;font-size:clamp(.78rem,1.6vw,.92rem);font-weight:500;color:#1a0005;line-height:1.4;white-space:pre-line}
+.det-l{font-size:clamp(8px,1.6vw,10px);letter-spacing:.38em;color:#5E0006;font-weight:600;text-transform:uppercase;display:block;margin-bottom:.22rem}
+.det-v{font-family:'Cormorant Garamond',serif;font-size:clamp(.95rem,2vw,1.15rem);font-weight:500;color:#1a0005;line-height:1.4;white-space:pre-line}
 
 /* ── MAP ── */
 .map-wrap{width:100%;border-radius:3px;overflow:hidden;border:1px solid rgba(94,0,6,.22);margin-top:.85rem}
@@ -420,7 +420,7 @@ export default function WeddingInvitation() {
             {/* 4 — Details */}
             <div className="fs">
               <span className="eyebrow">Celebration Details</span>
-              <div className="det-grid">
+              <div className="det-grid font-size:1rem">
                 {[
                   { l: "Date",     v: "Monday\n18 May 2026" },
                   { l: "Ceremony", v: "10:40 AM\nPoruwa Ceremony" },
@@ -431,7 +431,7 @@ export default function WeddingInvitation() {
                     {d.map ? (
                       <a href={MAPS_OPEN} target="_blank" rel="noopener noreferrer" style={{
                         fontFamily: "'Cormorant Garamond',serif",
-                        fontSize: "clamp(.78rem,1.6vw,.92rem)",
+                        fontSize: "clamp(.95rem,2vw,1.15rem)",
                         fontWeight: 500,
                         color: "#5E0006",
                         textDecoration: "underline",
