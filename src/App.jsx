@@ -9,7 +9,6 @@ function useCSS(css) {
   }, []);
 }
 
-// Inject Google Fonts
 function useFonts() {
   useEffect(() => {
     const preconnect1 = document.createElement("link");
@@ -104,7 +103,7 @@ body{
   overflow-y:auto;
   padding:clamp(2rem,5vw,4rem) clamp(.75rem,3vw,1.5rem) clamp(3rem,6vw,5rem);
   z-index:50;opacity:0;pointer-events:none;
-  transition:opacity .5s ease .8s;
+  transition:opacity .9s ease .15s;
 }
 .full-page.show{opacity:1;pointer-events:all}
 .full-inner{width:100%;max-width:520px;margin:0 auto}
@@ -121,10 +120,6 @@ body{
 }
 .full-page.show .full-card{transform:translateY(0) scale(1)}
 
-.fc-wm{position:absolute;inset:0;pointer-events:none;opacity:.025;
-  background-image:repeating-linear-gradient(45deg,transparent,transparent 15px,#A18168 15px,#A18168 16px),
-  repeating-linear-gradient(-45deg,transparent,transparent 15px,#A18168 15px,#A18168 16px)}
-
 .fcc{position:absolute;width:22px;height:22px;border-color:var(--crimson);border-style:solid;opacity:.6;z-index:3}
 .fcc.tl{top:12px;left:12px;border-width:1.5px 0 0 1.5px}
 .fcc.tr{top:12px;right:12px;border-width:1.5px 1.5px 0 0}
@@ -137,7 +132,7 @@ body{
   position:absolute;
   inset:0;
   background:url('/images/image2.jpeg') center/cover no-repeat;
-  opacity:0.1;
+  opacity:0.05;
   pointer-events:none;
   z-index:1;
 }
@@ -157,30 +152,10 @@ body{
 .full-page.show .fs:nth-child(12){transition-delay:1.80s}
 .full-page.show .fs:nth-child(14){transition-delay:2.00s}
 .full-page.show .fs:nth-child(16){transition-delay:2.20s}
-
-.fsep{height:1px;margin:0 clamp(1.4rem,4.5vw,2.6rem);background:linear-gradient(90deg,transparent,var(--sep),transparent);position:relative;z-index:2;opacity:0;transition:opacity .7s ease}
-.full-page.show .fsep{opacity:1}
-.full-page.show .fsep:nth-of-type(1){transition-delay:.95s}
-.full-page.show .fsep:nth-of-type(2){transition-delay:1.15s}
-.full-page.show .fsep:nth-of-type(3){transition-delay:1.35s}
-.full-page.show .fsep:nth-of-type(4){transition-delay:1.55s}
-.full-page.show .fsep:nth-of-type(5){transition-delay:1.75s}
-.full-page.show .fsep:nth-of-type(6){transition-delay:1.95s}
-.full-page.show .fsep:nth-of-type(7){transition-delay:2.15s}
-
-.sep-gem{text-align:center;margin-top:-.58rem;position:relative;z-index:3;opacity:0;transition:opacity .5s ease}
-.full-page.show .sep-gem{opacity:1}
-.full-page.show .sep-gem:nth-of-type(1){transition-delay:1.0s}
-.full-page.show .sep-gem:nth-of-type(2){transition-delay:1.2s}
-.full-page.show .sep-gem:nth-of-type(3){transition-delay:1.4s}
-.full-page.show .sep-gem:nth-of-type(4){transition-delay:1.6s}
-.full-page.show .sep-gem:nth-of-type(5){transition-delay:1.8s}
-.full-page.show .sep-gem:nth-of-type(6){transition-delay:2.0s}
-.full-page.show .sep-gem:nth-of-type(7){transition-delay:2.2s}
-.sep-gem span{background:var(--card-mid);padding:0 .75rem;color:#f7e7ce;font-size:.72rem;font-weight:600;font-family:'Raleway',sans-serif}
+.full-page.show .fs:nth-child(18){transition-delay:2.40s}
 
 .eyebrow{font-size:clamp(7.5px,1.3vw,8.5px);font-weight:700;letter-spacing:.55em;color:#A18168;text-transform:uppercase;display:block;margin-bottom:.85rem;font-family:'Raleway',sans-serif}
-.heading{font-family:'Raleway',serif;font-size:clamp(1.05rem,2.8vw,1.55rem);font-weight:600;color:#000000;line-height:1.3;margin-bottom:.55rem}
+.heading{font-family:'Raleway',sans-serif;font-size:clamp(1.05rem,2.8vw,1.55rem);font-weight:600;color:#000000;line-height:1.3;margin-bottom:.55rem}
 .body-p{font-family:'Manrope',sans-serif;font-size:clamp(.9rem,1.9vw,1.06rem);font-weight:400;color:rgba(0,0,0,0.85);line-height:1.8}
 
 .cover-names{font-family:'Great Vibes',cursive;font-size:clamp(3rem,9.5vw,5.8rem);color:#000000;line-height:.94;text-shadow:0 2px 12px rgba(247,231,206,.3)}
@@ -211,6 +186,13 @@ body{
 .det-l{font-size:clamp(8px,1.6vw,10px);letter-spacing:.38em;color:#000000;font-weight:700;text-transform:uppercase;display:block;margin-bottom:.22rem;font-family:'Raleway',sans-serif}
 .det-v{font-family:'Manrope',sans-serif;font-size:clamp(.95rem,2vw,1.15rem);font-weight:500;color:#000000;line-height:1.4;white-space:pre-line}
 
+/* ── COUNTDOWN ── */
+.cd-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(.4rem,1.5vw,.75rem);margin-top:.5rem}
+.cd-box{border:1px solid rgba(0,0,0,0.15);padding:clamp(.6rem,2vw,1rem) .4rem;background:rgba(247,231,206,0.35);display:flex;flex-direction:column;align-items:center;gap:.25rem}
+.cd-num{font-family:'Raleway',sans-serif;font-size:clamp(1.6rem,5vw,2.4rem);font-weight:700;color:#000000;line-height:1}
+.cd-lbl{font-family:'Raleway',sans-serif;font-size:clamp(6px,1.2vw,8px);letter-spacing:.35em;font-weight:600;color:#000000;text-transform:uppercase;opacity:.6}
+.cd-done{font-family:'Great Vibes',cursive;font-size:clamp(1.6rem,5vw,2.2rem);color:#000000}
+
 /* ── MAP ── */
 .map-wrap{width:100%;border-radius:3px;overflow:hidden;border:1px solid rgba(247,231,206,.3);margin-top:.85rem}
 .map-wrap iframe{display:block;width:100%;height:220px;border:0}
@@ -238,6 +220,8 @@ body{
   .couple-photos{grid-template-columns:1fr 1fr}
   .full-page{padding:1.8rem .65rem 3.5rem}
   .fs{padding:1.25rem 1.1rem}
+  .cd-wrap{gap:.3rem}
+  .cd-num{font-size:clamp(1.3rem,8vw,1.8rem)}
 }
 `;
 
@@ -328,6 +312,49 @@ function PhotoFrame({ src, label, icon }) {
           <span className="photo-label">{label}</span>
         </div>
       )}
+    </div>
+  );
+}
+
+function CountdownTimer() {
+  const target = new Date("2026-05-18T10:40:00");
+  const [timeLeft, setTimeLeft] = useState({});
+
+  useEffect(() => {
+    function calc() {
+      const diff = target - new Date();
+      if (diff <= 0) return setTimeLeft({ done: true });
+      setTimeLeft({
+        days:    Math.floor(diff / (1000 * 60 * 60 * 24)),
+        hours:   Math.floor((diff / (1000 * 60 * 60)) % 24),
+        minutes: Math.floor((diff / (1000 * 60)) % 60),
+        seconds: Math.floor((diff / 1000) % 60),
+      });
+    }
+    calc();
+    const id = setInterval(calc, 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  if (timeLeft.done) return (
+    <div className="cd-wrap" style={{ justifyItems: "center" }}>
+      <p className="cd-done" style={{ gridColumn: "1/-1" }}>Today is the day! 🎉</p>
+    </div>
+  );
+
+  return (
+    <div className="cd-wrap">
+      {[
+        { v: timeLeft.days,    l: "Days"    },
+        { v: timeLeft.hours,   l: "Hours"   },
+        { v: timeLeft.minutes, l: "Minutes" },
+        { v: timeLeft.seconds, l: "Seconds" },
+      ].map(({ v, l }) => (
+        <div className="cd-box" key={l}>
+          <span className="cd-num">{String(v ?? "0").padStart(2, "0")}</span>
+          <span className="cd-lbl">{l}</span>
+        </div>
+      ))}
     </div>
   );
 }
@@ -482,7 +509,19 @@ export default function WeddingInvitation() {
               <div className="cl-line r" />
             </div>
 
-            {/* 5 — Map */}
+            {/* 5 — Countdown */}
+            <div className="fs">
+              <span className="eyebrow">Counting Down</span>
+              <CountdownTimer />
+            </div>
+
+            <div className="cl-rule">
+              <div className="cl-line l" />
+              <span style={{ color: "#f7e7ce", fontSize: ".68rem" }}>✦</span>
+              <div className="cl-line r" />
+            </div>
+
+            {/* 6 — Map */}
             <div className="fs">
               <span className="eyebrow">Find Us Here</span>
               <VenueMap />
@@ -494,7 +533,7 @@ export default function WeddingInvitation() {
               <div className="cl-line r" />
             </div>
 
-            {/* 6 — Closing */}
+            {/* 7 — Closing */}
             <div className="fs">
               <div className="cl-script">P &amp; M</div>
               <p className="cl-verse">
