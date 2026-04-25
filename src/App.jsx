@@ -231,7 +231,7 @@ body{
 .cl-line{flex:1;height:1px}
 .cl-line.l{background:linear-gradient(90deg,transparent,rgba(247,231,206,.5))}
 .cl-line.r{background:linear-gradient(90deg,rgba(247,231,206,.5),transparent)}
-.cl-reply{margin-top:1.1rem;font-size:clamp(5.5px,1.1vw,7px);letter-spacing:.44em;font-weight:400;color:rgba(0,0,0,0.55);text-transform:uppercase;font-family:'Raleway',sans-serif}
+.cl-reply{margin-top:1.1rem;font-size:clamp(8px,1.6vw,10px);letter-spacing:.44em;font-weight:700;color:#000000;text-transform:uppercase;font-family:'Raleway',sans-serif}
 
 @media(max-width:440px){
   .det-grid{grid-template-columns:1fr}
